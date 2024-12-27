@@ -1,18 +1,18 @@
 services:
-  books_api:
-    image: thrsouza/books-api
-    container_name: books_api
+  georwell-api:
+    image: thrsouza/georwell
+    container_name: georwell-api
     build: .
     ports:
       - "3000:3000"
     environment:
-      - MONGO_CONNECTION_STRING=mongodb://books_db:27017/books-db
+      - MONGO_CONNECTION_STRING=mongodb://georwell-database:27017/georwell
       - PORT=3000
     depends_on:
-      - books_db
+      - georwell-database
 
-  books_db:
+  georwell-database:
     image: mongo
-    container_name: books_db
+    container_name: georwell-database
     ports:
       - "27017:27017"

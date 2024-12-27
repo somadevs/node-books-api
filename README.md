@@ -1,4 +1,4 @@
-# Node Books Api
+# Georwell
 
 This project was created as an example of "How to Create a Nodejs API" for educational porposes.
 
@@ -19,7 +19,7 @@ $ pnpm install
 Define the environament variables:
 
 ```env
-MONGO_CONNECTION_STRING=mongodb://localhost:27017/books-db
+MONGO_CONNECTION_STRING=mongodb://localhost:27017/georwell
 ```
 
 To run the application:
@@ -31,8 +31,8 @@ $ pnpm start
 To start server into a _docker container_:
 
 ```
-$ docker build -t thrsouza/books-api .
-$ docker run --name books-api -p 3000:3000 -d thrsouza/books-api
+$ docker build -t thrsouza/georwell .
+$ docker run --name georwell -p 3000:3000 -d thrsouza/georwell
 ```
 
 ### Endpoints
